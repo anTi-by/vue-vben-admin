@@ -61,7 +61,7 @@ const system: AppRouteModule = {
         title: t('routes.demo.system.dept'),
         ignoreKeepAlive: true,
       },
-      component: () => import('/@/views/demo/system/dept/index.vue'),
+      component: () => import('/@/views/sys/dept/index.vue'),
     },
     {
       path: 'changePassword',
