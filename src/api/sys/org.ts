@@ -1,7 +1,7 @@
 import { defHttp } from '/@/utils/http/axios';
 import { DeptListItem } from '/@/api/sys/model/orgModel';
 enum Api {
-  getOrgTreeList = '/sysOrg/tree',
+  getOrgTreeList = '/sysOrg/listDeptTree',
   getOrgPageList = '/sysOrg/page',
   addOrg = '/sysOrg/add',
   editOrg = '/sysOrg/edit',

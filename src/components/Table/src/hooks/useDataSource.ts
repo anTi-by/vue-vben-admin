@@ -253,15 +253,18 @@ export function useDataSource(
     if (!api || !isFunction(api)) return;
     try {
       setLoading(true);
-      const { pageField, sizeField, listField, totalField } = Object.assign(
-        {},
-        FETCH_SETTING,
-        fetchSetting,
-      );
+      const pageField = 'current';
+      const sizeField = 'size';
+      const listField = 'records';
+      // const { pageField, sizeField, listField, totalField } = Object.assign(
+      //   {},
+      //   FETCH_SETTING,
+      //   fetchSetting,
+      // );
+      const { totalField } = Object.assign({}, FETCH_SETTING, fetchSetting);
       let pageParams: Recordable = {};
 
       const { current = 1, pageSize = PAGE_SIZE } = unref(getPaginationInfo) as PaginationProps;
-
       if ((isBoolean(pagination) && !pagination) || isBoolean(getPaginationInfo)) {
         pageParams = {};
       } else {

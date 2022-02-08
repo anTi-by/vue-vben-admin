@@ -1,5 +1,4 @@
-import { BasicColumn } from '/@/components/Table';
-import { FormSchema } from '/@/components/Table';
+import { BasicColumn, FormSchema } from '/@/components/Table';
 import { h } from 'vue';
 import { Tag } from 'ant-design-vue';
 
@@ -90,8 +89,9 @@ export const formSchema: FormSchema[] = [
     label: '上级部门',
     component: 'TreeSelect',
     componentProps: {
-      replaceFields: {
-        title: 'title',
+      placeholder: '请选择上级部门',
+      fieldNames: {
+        label: 'name',
         key: 'id',
         value: 'id',
       },
